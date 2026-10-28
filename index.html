@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jay Patel - Mechanical Engineering Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar"><div class="wrap"><a class="name" href="index.html" id="owner"></a><span id="school"></span></div></div>
+<main class="wrap">
+  <section class="intro">
+    <h1>Design, analysis and documentation of mechanical systems.</h1>
+    <p id="tagline"></p>
+  </section>
+  <div class="sec"><span>Selected work</span><span id="count"></span></div>
+  <div class="works" id="done"></div>
+  <div class="sec" style="margin-top:34px"><span>In the queue</span><span>Built in this order</span></div>
+  <ul class="next" id="todo"></ul>
+</main>
+<footer class="wrap foot"><span>Autodesk Inventor, Python, gmsh / scikit-fem</span><span>Every project: assembly, BOM, drawings, calculations, FEA</span></footer>
+<script src="projects.js"></script>
+<script>
+const P = window.PORTFOLIO;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pad = n => String(n).padStart(2, '0');
+document.getElementById('owner').textContent = P.owner;
+document.getElementById('school').textContent = P.school;
+document.getElementById('tagline').textContent = P.tagline;
+const done = P.projects.filter(p => p.status === 'complete');
+document.getElementById('count').textContent = done.length + ' of ' + P.projects.length;
+const no = p => pad(P.projects.indexOf(p) + 1);
+document.getElementById('done').innerHTML = done.map(p => `
+  <a class="work" href="project.html?p=${p.slug}">
+    <div class="img"><img src="assets/${p.slug}/${p.cover}" alt="${esc(p.title)}" loading="lazy"></div>
+    <div class="cap"><span class="no">${no(p)}</span><div><h2>${esc(p.title)}</h2><p>${esc(p.tagline)}</p></div>
+    <span class="meta">${esc((p.tools || []).slice(0, 3).join(' / '))}</span></div>
+  </a>`).join('');
+document.getElementById('todo').innerHTML = P.projects.filter(p => p.status !== 'complete').map(p => `
+  <li><span class="no">${no(p)}</span><b>${esc(p.title)}</b><span>${esc(p.tagline)}</span><span class="st">${esc(p.difficulty)}</span></li>`).join('');
+</script>
+</body>
+</html>
