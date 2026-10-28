@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project - Jay Patel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar"><div class="wrap"><a class="name" href="index.html" id="owner"></a><a href="index.html">All work</a></div></div>
+<main class="wrap" id="main"></main>
+<footer class="wrap foot"><span>Jay Patel</span><a href="index.html">Back to all work</a></footer>
+<div id="lb"><img alt=""></div>
+<script src="projects.js"></script>
+<script src="render.js"></script>
+<script>
+const P = window.PORTFOLIO;
+document.getElementById('owner').textContent = P.owner;
+const slug = new URLSearchParams(location.search).get('p');
+const idx = P.projects.findIndex(x => x.slug === slug);
+const p = P.projects[idx];
+const main = document.getElementById('main');
+if (!p || p.status !== 'complete') {
+  main.innerHTML = '<p style="padding:56px 0">Project not found. <a href="index.html">Back to all work</a></p>';
+} else {
+  document.title = p.title + ' - ' + P.owner;
+  const next = P.projects.slice(idx + 1).find(x => x.status === 'complete');
+  const prev = P.projects.slice(0, idx).reverse().find(x => x.status === 'complete');
+  main.innerHTML = renderProject(P, idx) +
+    `<div class="pn">${prev ? `<a href="project.html?p=${prev.slug}">&larr; ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a href="project.html?p=${next.slug}">${esc(next.title)} &rarr;</a>` : '<span></span>'}</div>`;
+  initLightbox();
+}
+</script>
+</body>
+</html>
