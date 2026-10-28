@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://patel090903-cmyk.github.io/portfolio/sitemap.xml
