@@ -2,7 +2,7 @@
 // copy its images/PDFs into assets/<slug>/ and reference them by file name.
 window.PORTFOLIO = {
   owner: "Jay Patel",
-  tagline: "Mechanical engineering projects: design, analysis, and manufacturing-ready documentation.",
+  tagline: "Mechanical engineering design projects: CAD, analysis, and manufacturing-ready documentation. Each one is designed and simulated; none are built yet.",
   school: "Mechanical Engineering, Stevens Institute of Technology",
   projects: [
     {
@@ -10,18 +10,18 @@ window.PORTFOLIO = {
       title: "Quadcopter Drone",
       status: "complete",
       difficulty: "Very High",
-      tagline: "3D-printed carbon-nylon quadcopter: 1.7 kg, 139-part Inventor assembly, FEA and flight simulation.",
+      tagline: "3D-printable carbon-nylon quadcopter design: 1.7 kg, 139-part Inventor assembly, FEA and flight simulation.",
       cover: "assembly_iso.png",
       tools: ["Autodesk Inventor 2027", "Python", "scikit-fem / gmsh", "SU2", "Bambu Studio"],
       skills: ["Structural FEA", "Propulsion modelling", "Flight dynamics", "Design for 3D printing", "Assembly design"],
-      summary: "A complete quadcopter airframe designed in Inventor around a T-Motor AIR2216 / 1045 propulsion set, a Pixhawk 6C flight controller and a 4S 5000 mAh pack. The frame is printed in PA6-CF on a Bambu printer. Every purchased part is a vendor model or a sized stand-in, and every printed part has a measured mass, an FEA result and a print file.",
+      summary: "A complete quadcopter airframe designed in Inventor around a T-Motor AIR2216 / 1045 propulsion set, a Pixhawk 6C flight controller and a 4S 5000 mAh pack. The frame is designed to be 3D printed in PA6-CF on a Bambu printer. It has not been built yet. Every purchased part is a vendor model or a sized stand-in, and every printable part has a CAD-measured mass, an FEA result and a print file.",
       specs: [
         ["All-up weight", "1696 g (1616 g measured in CAD + 80 g wiring allowance)"],
         ["Assembly", "139 occurrences, 31 unique files, 221 constraints, all 0 DOF"],
         ["Interference", "0 pairs across all 139 components"],
         ["Thrust-to-weight", "2.69 at 14.8 V, 3.14 at 16.0 V"],
         ["Hover endurance", "15.5 min (229 W, 80% depth of discharge)"],
-        ["Frame material", "Bambu PA6-CF, 3 print plates"],
+        ["Frame material", "Bambu PA6-CF (planned), 3 print plates prepared"],
         ["Max payload (TWR >= 2)", "500 g"]
       ],
       results: [
@@ -37,7 +37,7 @@ window.PORTFOLIO = {
         "Built a 6-DOF flight simulator in Python (quaternion dynamics, CAD-derived inertia, blade-element rotor model) with a PX4-style cascaded PID controller.",
         "Validated the rotor model against UIUC wind-tunnel data and fitted the motor/ESC/battery model to manufacturer bench tables.",
         "Ran SU2 RANS CFD to estimate arm-in-downwash losses (5.5% of thrust) and airframe drag area.",
-        "Ran modal analysis and a Campbell diagram on the printed frame and flagged a resonance at hover, with a recommended fix."
+        "Ran modal analysis and a Campbell diagram on the 3D-printable frame and flagged a resonance at hover, with a recommended fix."
       ],
       views: [
         ["assembly_iso.png", "Isometric"],
@@ -70,18 +70,18 @@ window.PORTFOLIO = {
         ["Bill of materials (CSV)", "QuadDrone_BOM.csv"],
         ["Simulation summary (Markdown)", "Summary_Simulations.md"]
       ],
-      notes: "Simulation results are computer models, not flight tests of this airframe. Damper stiffness, battery resistance and gimbal mass are assumptions; the full write-up lists each one."
+      notes: "The drone has not been built. All results are CAD measurements, calculations or computer simulations, not flight or bench tests of this airframe. Damper stiffness, battery resistance and gimbal mass are assumptions; the full write-up lists each one."
     },
     {
       slug: "robotic-arm",
       title: "6-DOF Robotic Arm",
       status: "complete",
       difficulty: "Very High",
-      tagline: "3D-printed six-axis arm for a 500 g payload: 538 mm reach, designed gear and belt reductions, 99-part Inventor assembly, dynamics and FEA.",
+      tagline: "3D-printable six-axis arm design for a 500 g payload: 538 mm reach, designed gear and belt reductions, 99-part Inventor assembly, dynamics and FEA.",
       cover: "assembly_iso.png",
       tools: ["Autodesk Inventor 2027", "Python", "scikit-fem / gmsh", "NumPy / Matplotlib", "Bambu Studio"],
       skills: ["Robotics", "Kinematics", "Rigid-body dynamics", "Torque calculations", "Gear design", "Structural FEA", "Design for 3D printing", "Mechanical assemblies"],
-      summary: "A desktop six-axis arm designed in Inventor around commercial actuators: NEMA17 steppers with StepperOnline planetary gearboxes on the base, shoulder and elbow, and DSSERVO digital servos on the wrist and gripper. I designed every reduction stage: printed involute spur gears on J1, J2, J4 and J5, and an HTD 5M belt inside the box-section upper arm on J3. The belt let me move the elbow motor next to the shoulder, which takes torque off J2. Joint angles are Inventor parameters that drive a fully constrained assembly, and the gear pinions are coupled to their joints so the teeth stay in mesh at any pose. All structural parts and gears print in PA6-CF on a Bambu printer.",
+      summary: "A desktop six-axis arm designed in Inventor around commercial actuators: NEMA17 steppers with StepperOnline planetary gearboxes on the base, shoulder and elbow, and DSSERVO digital servos on the wrist and gripper. I designed every reduction stage: printed involute spur gears on J1, J2, J4 and J5, and an HTD 5M belt inside the box-section upper arm on J3. The belt let me move the elbow motor next to the shoulder, which takes torque off J2. Joint angles are Inventor parameters that drive a fully constrained assembly, and the gear pinions are coupled to their joints so the teeth stay in mesh at any pose. All structural parts and gears are designed to print in PA6-CF on a Bambu printer.",
       specs: [
         ["Payload / reach", "0.5 kg; 538 mm shoulder-to-TCP at full extension, 390 mm tool-down at table height"],
         ["Link lengths", "L1 204 / L2 200 / L3 192 / wrist-to-TCP 146 mm, spherical wrist"],
