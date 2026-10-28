@@ -150,9 +150,104 @@ window.PORTFOLIO = {
       ],
       notes: "All results are calculated or simulated from the CAD model; the arm has not been built. Assumptions include a stepper pull-out curve typical of the motor class, 50% of servo stall as the continuous rating, 30 MPa allowable stress for printed gear teeth, a 300 N belt working limit, solid printed parts in the FEA, and estimated motor and gearbox masses. The full report lists each one."
     },
-    { slug: "f1-suspension", title: "F1 Pushrod Suspension", status: "planned", difficulty: "Very High",
-      tagline: "Double-wishbone pushrod suspension: camber gain, wheel travel, motion ratios and FEA under cornering and braking.",
-      skills: ["Automotive engineering", "Kinematics", "FEA", "Mechanical design"] },
+    {
+      slug: "f1-suspension",
+      title: "F1 Pushrod Suspension",
+      status: "complete",
+      difficulty: "Very High",
+      tagline: "Full-size double-wishbone pushrod front corner designed in Inventor: kinematics, motion ratios, member forces and FEA under 4 g cornering and braking.",
+      cover: "assembly_iso_wheel_hidden.png",
+      tools: ["Autodesk Inventor 2027", "Python", "SciPy / NumPy", "scikit-fem / gmsh", "Matplotlib"],
+      skills: ["Vehicle dynamics", "Suspension kinematics", "Statics and member forces", "Column buckling", "Structural FEA", "Mechanism design", "Mechanical assemblies", "Engineering drawings"],
+      summary: "A full-size front-left corner for an F1-class single seater (800 kg, 1600 mm track, 305/720 R18 tyre), designed in Inventor from one hardpoint table so the CAD, kinematics, loads and FEA all share the same numbers. 4130 tube wishbones carry GE 12 E spherical bearings; a 7075-T6 upright holds a double-row hub bearing, a carbon disc and a 6-piston caliper; the pushrod runs from the upright to a twin-plate rocker on the chassis that compresses a coil-over damper. The assembly is built with real joints (revolute pivots, spherical ball joints, a sliding rack) and is driven by two Inventor parameters, Heave and Steer. Analysis found five real design problems, from a pushrod bracket that bent the lower wishbone to rod ends hitting their clevises at full lock, and each was fixed in the model. Designed and simulated only; nothing has been built.",
+      specs: [
+        ["Vehicle", "800 kg, 45% front, CG 300 mm, wheelbase 3600 mm, track 1600 mm, downforce 2.0 x weight (40% front)"],
+        ["Wheel / tyre", "18 in forged Mg rim, 305/720 R18, centre lock, C/C disc 328 x 32"],
+        ["Static geometry", "Camber -3.0 deg, KPI 8.5 deg, caster 6.9 deg, scrub radius 39 mm, trail 31 mm"],
+        ["Travel / steering", "+35 / -25 mm wheel travel; +-28 mm rack gives 11.5 deg road-wheel angle"],
+        ["Springing", "160 N/mm coil (d12, 4.9 coils) on a 60 mm-stroke damper; wheel rate 133 N/mm; ride 4.1 Hz"],
+        ["Materials", "4130 normalised tube (wishbones, pushrod, tie rod), 7075-T6 (upright, rocker, brackets), Ti-6Al-4V hub"],
+        ["Mass (Inventor)", "42.1 kg corner, 33.6 kg unsprung (links counted 50%)"],
+        ["Assembly", "126 occurrences, 33 unique files, 324 constraints; ISO 4762 screws, locknuts and 6202 bearings from step.parts"]
+      ],
+      results: [
+        ["Camber gain / roll camber", "-0.54 deg per 25 mm bump; outer wheel +0.71 deg per deg of roll", "Simulated"],
+        ["Bump steer (tie-rod inner point optimised)", "0.26 mdeg toe change over the full 60 mm travel", "Simulated"],
+        ["Roll centre / anti-dive", "72 mm static (62 to 80 mm over travel); 28% anti-dive", "Simulated"],
+        ["Motion ratio", "Installation ratio 0.894 static, rising 0.82 to 1.01; damper uses 54.7 of 60 mm stroke", "Simulated"],
+        ["Inventor solver vs Python kinematics", "1e-5 deg camber, 3e-5 mm hardpoint error over 19 poses", "Validated in CAD"],
+        ["Interference over travel and full lock", "0 clashing pairs at 19 poses", "Checked in Inventor"],
+        ["Member forces (4 limit cases)", "Lower front leg 20.9 kN tension (4 g braking); pushrod 21.3 kN compression (3 g bump)", "Calculated"],
+        ["Pushrod / lower rear leg buckling", "SF 2.15 / 2.84 (Johnson / Euler, pinned ends)", "Calculated"],
+        ["FEA lower / upper wishbone (4130)", "266 / 122 MPa at the 99.9th percentile, 4 g braking", "SF 1.73 / 3.78 vs yield (simulated)"],
+        ["FEA upright / clevis bracket / rocker (7075-T6)", "283 / 317 / 171 MPa at the 99.9th percentile", "SF 1.78 / 1.59 / 2.95 vs yield (simulated)"]
+      ],
+      highlights: [
+        "Solved the corner as a rigid-body mechanism in Python (least squares on the five link closures), then built the same mechanism in Inventor with real joints and checked the two solvers against each other at 19 poses. They agree to 1e-5 deg.",
+        "Optimised the inner tie-rod point to cut bump steer to 0.26 mdeg, and tuned the hardpoints for about 0.5 deg of camber gain per 25 mm, a 72 mm roll centre and 28% anti-dive.",
+        "Resolved the tyre loads into the six two-force members for 4 g cornering, 4 g braking, combined and 3 g bump cases. Checked buckling, bolt shear and bearing ratings, and sized the spring for a 4 Hz ride.",
+        "Ran gmsh + scikit-fem FEA on both wishbones, the upright, the chassis bracket and the rocker with balanced load sets. The FEA and the interference sweeps drove five redesigns, including moving the pushrod to the upright, turning the lower ball-joint bolt vertical and putting every tube on its force line."
+      ],
+      views: [
+        ["assembly_iso.png", "Isometric, static ride height"],
+        ["assembly_rear_iso.png", "Rear isometric"],
+        ["assembly_front.png", "Front"],
+        ["assembly_side.png", "Side (outboard)"],
+        ["assembly_top.png", "Top"],
+        ["assembly_exploded_iso.png", "Exploded view"],
+        ["position_bump_front.png", "Full bump (+35 mm), front"],
+        ["position_droop_front.png", "Full droop (-25 mm), front"],
+        ["assembly_iso_wheel_hidden.png", "Isometric with the wheel hidden: wishbones, upright, pushrod, rocker and damper"],
+        ["assembly_rear_iso_wheel_hidden.png", "Rear isometric with the wheel hidden"],
+        ["position_lock_right_top.png", "Full steering lock, top"],
+        ["assembly_exploded_front.png", "Exploded view, front"]
+      ],
+      drawings: [
+        ["drawing_assembly_1.png", "Assembly drawing"],
+        ["drawing_manufacturing_1.png", "Manufacturing drawings, sheet 1: wishbones"],
+        ["drawing_manufacturing_2.png", "Manufacturing drawings, sheet 2: upright and rocker"],
+        ["drawing_manufacturing_3.png", "Manufacturing drawings, sheet 3: brackets and links"],
+        ["drawing_manufacturing_4.png", "Manufacturing drawings, sheet 4: hub and small parts"]
+      ],
+      analysis: [
+        { title: "Suspension kinematics", items: [
+          ["camber_vs_travel.png", "Camber vs wheel travel"],
+          ["camber_vs_roll.png", "Camber to ground in roll"],
+          ["bump_steer.png", "Bump steer after optimising the tie-rod inner point"],
+          ["roll_centre_heave.png", "Roll-centre height in heave"],
+          ["roll_centre_roll.png", "Roll-centre migration in roll"],
+          ["track_antidive.png", "Track change and anti-dive"],
+          ["steering.png", "Steering: road-wheel angle vs rack travel"],
+          ["inventor_vs_python.png", "Inventor assembly solver vs Python model"]
+        ] },
+        { title: "Motion ratio and springing", items: [
+          ["motion_ratio.png", "Pushrod, rocker and installation ratios"],
+          ["wheel_rate.png", "Wheel rate and spring force over travel"],
+          ["damper_rocker.png", "Damper length and rocker angle over travel"]
+        ] },
+        { title: "Loads and forces", items: [
+          ["member_forces.png", "Member forces per load case"],
+          ["buckling.png", "Column buckling safety factors"]
+        ] },
+        { title: "Structural FEA", items: [
+          ["fea_LowerWishbone_vonMises.png", "Lower wishbone von Mises stress, 4 g braking"],
+          ["fea_UpperWishbone_vonMises.png", "Upper wishbone von Mises stress, 4 g braking"],
+          ["fea_Upright_vonMises.png", "Upright von Mises stress, 4 g braking"],
+          ["fea_WishboneClevis_vonMises.png", "Chassis clevis bracket, worst pickup load"],
+          ["fea_Rocker_vonMises.png", "Rocker von Mises stress, 3 g bump"]
+        ] }
+      ],
+      downloads: [
+        ["Calculation report (PDF)", "F1Suspension_CalcReport.pdf"],
+        ["Assembly drawing (PDF)", "F1Suspension_Assembly.pdf"],
+        ["Manufacturing drawings (PDF)", "F1Suspension_Manufacturing.pdf"],
+        ["Bill of materials (CSV)", "F1Suspension_BOM.csv"],
+        ["Member forces (CSV)", "member_forces.csv"],
+        ["Test summary (Markdown)", "Test_Summary.md"],
+        ["Assembly STEP", "F1Suspension.stp"]
+      ],
+      notes: "Designed and simulated only: the corner has not been built or tested, and every number is a model prediction. Loads are quasi-static limit cases from a point-mass vehicle model with assumed downforce, weight distribution and brake bias. Spherical bearings, rod ends, the damper, hub bearing, caliper, disc, rim and tyre are catalogue-dimension or envelope models with estimated masses and assumed ratings. FEA safety factors are quoted on the 99.9th-percentile stress because the CAD has sharp corners where real parts have weld and machining fillets; peak values are listed in the report. Heave springs, the anti-roll bar and the right-hand corner are not modelled."
+    },
     { slug: "go-kart-drivetrain", title: "Electric Go-Kart Drivetrain", status: "planned", difficulty: "High",
       tagline: "Electric drivetrain for a 25 mph kart: motor, reduction, axle, chain and mounts, sized from torque and acceleration targets.",
       skills: ["EV systems", "Drivetrain design", "Engineering calculations"] },
