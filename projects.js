@@ -41,7 +41,11 @@ window.PORTFOLIO = {
       ],
       views: [
         ["assembly_iso.png", "Isometric"],
-        ["assembly_side.png", "Side"]
+        ["assembly_rear.png", "Rear isometric"],
+        ["assembly_front.png", "Front"],
+        ["assembly_side.png", "Side: battery, straps and camera gimbal"],
+        ["assembly_top.png", "Top"],
+        ["exploded_view.png", "Exploded view"]
       ],
       drawings: [
         ["drawing_assembly_1.png", "Assembly drawing"]
@@ -111,9 +115,12 @@ window.PORTFOLIO = {
       ],
       views: [
         ["assembly_iso.png", "Isometric, home pose"],
-        ["assembly_rear.png", "Rear isometric: J2 stepper and 84T gear"],
-        ["full_extension_side.png", "Side, full extension (worst case for the shoulder)"],
-        ["exploded_view.png", "Exploded view"]
+        ["assembly_rear.png", "Rear isometric: J2 and J3 steppers and the 84T gear"],
+        ["assembly_front.png", "Front"],
+        ["assembly_side.png", "Side, home pose"],
+        ["assembly_top.png", "Top"],
+        ["exploded_view.png", "Exploded view"],
+        ["full_extension_side.png", "Side, full extension (worst case for the shoulder)"]
       ],
       drawings: [
         ["drawing_assembly_1.png", "Assembly drawing"],
