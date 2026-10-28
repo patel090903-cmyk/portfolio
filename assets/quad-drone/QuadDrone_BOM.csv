@@ -1,0 +1,33 @@
+Item,Qty,Part number,Description,Vendor,Material,Unit mass g,Total mass g,Mass source,CAD source,File
+1,1,QD-101,"Bottom centre plate 150x150x4, arm clamp + battery cage + gimbal mount",3D printed in-house,PA6-CF (printed),74.3,74.3,Inventor (geometry x density),Designed - 3D printed,Parts\Frame\BottomPlate.ipt
+2,1,QD-102,"Top centre plate 150x150x3, FC damper mounts + hatch standoffs",3D printed in-house,PA6-CF (printed),56.3,56.3,Inventor (geometry x density),Designed - 3D printed,Parts\Frame\TopPlate.ipt
+3,1,QD-105,"Electronics bay hatch (top cover), 4 thumb-screw standoffs, GPS mast base",3D printed in-house,PA6-CF (printed),32.83,32.83,Inventor (geometry x density),Designed - 3D printed,Parts\Frame\HatchPlate.ipt
+4,1,QD-106,FC damping plate on 4 silicone ball dampers,3D printed in-house,PA6-CF (printed),18.04,18.04,Inventor (geometry x density),Designed - 3D printed,Parts\Frame\FcDampingPlate.ipt
+5,1,QD-107,"Battery tray / retention cage: strap slots, side rails, front stop",3D printed in-house,PA6-CF (printed),32.43,32.43,Inventor (geometry x density),Designed - 3D printed,Parts\Frame\BatteryTray.ipt
+6,1,QD-108,"Upper gimbal bracket (frame side of the damper set), ribbed",3D printed in-house,PA6-CF (printed),14.13,14.13,Inventor (geometry x density),Designed - 3D printed,Parts\Frame\GimbalMountUpper.ipt
+7,1,QD-109,Lower gimbal damping plate (gimbal side),3D printed in-house,PA6-CF (printed),5.54,5.54,Inventor (geometry x density),Designed - 3D printed,Parts\Frame\GimbalMountLower.ipt
+8,1,QD-110,"GPS mast, hollow (GPS cable inside), 3 gussets, M9N platform",3D printed in-house,PA6-CF (printed),12.36,12.36,Inventor (geometry x density),Designed - 3D printed,Parts\Frame\GpsMast.ipt
+9,4,QD-103,"Arm: tapered hollow ribbed box, internal cable channel, integral motor pad",3D printed in-house,PA6-CF (printed),39.27,157.08,Inventor (geometry x density),Designed - 3D printed,Parts\Frame\Arm.ipt
+10,4,QD-104,"Landing leg, tapered strut, bolts under the arm (2x M3x30)",3D printed in-house,PA6-CF (printed),17.64,70.58,Inventor (geometry x density),Designed - 3D printed,Parts\Frame\LandingLeg.ipt
+11,4,AIR2216-II-KV920,"Brushless motor T-Motor AIR2216 II KV920 (4S, 1045 prop), 16x19 mm M3 mount",T-Motor,Generic,64.0,256.0,T-Motor 64 g incl. cable,Vendor CAD (downloaded STEP),Parts\Components\Motor2216KV920.ipt
+12,2,T1045-CW,"Propeller 10x4.5 in (1045) CW, glass-fibre nylon, T-Motor T1045 class",T-Motor (T1045) or equivalent,Nylon 6/6,13.0,26.0,T-Motor T1045 13 g,Modelled stand-in,Parts\Components\Prop1045CW.ipt
+13,4,PROPNUT-M6,"Prop lock nut M6 (thin), 7075 aluminium",McMaster-Carr / any,Aluminum 6061,0.62,2.47,Inventor (geometry x density),Standard part (modelled),Parts\Hardware\PropNutM6.ipt
+14,4,XROTOR-MICRO-30A,"ESC 30 A BLHeli_S 2-4S (Hobbywing XRotor Micro 30A class), 23.8x14.5x5.8",Hobbywing,Copper,6.0,24.0,Hobbywing 6 g (without leads),Modelled stand-in,Parts\Components\Esc30A.ipt
+15,32,ISO 4762 M3x6,"Socket head cap screw M3x6, A2 stainless",McMaster-Carr / any,"Steel, Alloy",0.69,22.15,Inventor (geometry x density),Standard part (modelled),Parts\Hardware\ScrewM3x6.ipt
+16,8,ISO 4762 M3x30,"Socket head cap screw M3x30, A2 stainless",McMaster-Carr / any,"Steel, Alloy",1.57,12.59,Inventor (geometry x density),Standard part (modelled),Parts\Hardware\ScrewM3x30.ipt
+17,23,ISO 10511 M3,"Nylon-insert lock nut M3, A2 stainless",McMaster-Carr / any,"Steel, Alloy",0.65,15.04,Inventor (geometry x density),Standard part (modelled),Parts\Hardware\NutM3Nylock.ipt
+18,8,ISO 4762 M3x35,"Socket head cap screw M3x35, A2 stainless",McMaster-Carr / any,"Steel, Alloy",1.76,14.06,Inventor (geometry x density),Standard part (modelled),Parts\Hardware\ScrewM3x35.ipt
+19,2,T1045-CCW,"Propeller 10x4.5 in (1045) CCW, glass-fibre nylon, T-Motor T1045 class",T-Motor (T1045) or equivalent,Nylon 6/6,13.0,26.0,T-Motor T1045 13 g,Modelled stand-in,Parts\Components\Prop1045CCW.ipt
+20,4,STANDOFF-M3x35-FF,"Hex standoff M3x35 female-female, 5 mm AF, 6061 aluminium",McMaster-Carr / any,Aluminum 6061,1.58,6.33,Inventor (geometry x density),Standard part (modelled),Parts\Hardware\StandoffM3x35.ipt
+21,4,STANDOFF-M3x10-FF,"Hex standoff M3x10 female-female, 5 mm AF, 6061 aluminium",McMaster-Carr / any,Aluminum 6061,0.45,1.81,Inventor (geometry x density),Standard part (modelled),Parts\Hardware\StandoffM3x10.ipt
+22,4,ISO 4762 M3x8,"Socket head cap screw M3x8, A2 stainless",McMaster-Carr / any,"Steel, Alloy",0.77,3.06,Inventor (geometry x density),Standard part (modelled),Parts\Hardware\ScrewM3x8.ipt
+23,7,ISO 4762 M3x12,"Socket head cap screw M3x12, A2 stainless",McMaster-Carr / any,"Steel, Alloy",0.91,6.39,Inventor (geometry x density),Standard part (modelled),Parts\Hardware\ScrewM3x12.ipt
+24,8,DAMPER-BALL-12,"Silicone anti-vibration ball damper, 12 mm ball, M3-plate type",Generic (FC/gimbal damper set),"Rubber, Silicone",1.71,13.66,Inventor (geometry x density),Modelled stand-in,Parts\Hardware\VibrationDamper.ipt
+25,2,FOAM-3M-4026,Double-sided mounting foam 40x30x1 mm (FC),3M,Rubber,1.0,2.0,Inventor (geometry x density),Modelled stand-in,Parts\Hardware\FoamPad.ipt
+26,1,PIXHAWK-6C-ALU,Flight controller Holybro Pixhawk 6C (aluminium case) 84.8x44x12.4,Holybro,Generic,59.3,59.3,Holybro 59.3 g,Vendor CAD (downloaded STEP),Parts\Components\FlightControllerPixhawk6C.ipt
+27,1,HOLYBRO-M9N,"GPS Holybro M9N (u-blox NEO-M9N + IST8310 compass), 50 mm puck",Holybro,Generic,32.0,32.0,Holybro 32 g,Vendor CAD (downloaded STEP),Parts\Components\GpsM9N.ipt
+28,1,PM02-V3,"Power module / PDB for Pixhawk (Holybro PM02 class), XT60 in, 4 ESC pads",Holybro,Generic,20.0,20.0,Inventor (geometry x density),Modelled stand-in,Parts\Components\PowerModule.ipt
+29,1,GA-B-45C-5000-4S1P,"LiPo 4S1P 14.8 V 5000 mAh 45C (Gens Ace), 154x46x30, XT60",Gens Ace,Generic,480.0,480.0,Gens Ace 480 g +/-20,Modelled stand-in,Parts\Components\Battery4S5000.ipt
+30,1,GIMBAL-2AX-MICRO,2-axis micro brushless gimbal with 1/2.3 in action camera (roll + pitch),Generic,Generic,110.0,110.0,Inventor (geometry x density),Modelled stand-in,Parts\Components\Gimbal2Axis.ipt
+31,2,STRAP-20x250,Battery strap 20 mm hook-and-loop with rubberised grip (loop through tray slots),Generic,Nylon 6/6,4.89,9.78,Inventor (geometry x density),Modelled stand-in,Parts\Frame\BatteryStrap.ipt
+,139,TOTAL (CAD),,,,,1616.2,,,
