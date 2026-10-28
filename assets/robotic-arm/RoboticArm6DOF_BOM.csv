@@ -1,0 +1,44 @@
+Item,Qty,Part number,Description,Vendor,Material,Unit mass g,Total mass g,Mass source,CAD source,File
+1,1,RA-101,"Base plate / bench flange, 4x M5 bench bolts on PCD 220",3D printed in-house,PETG (printed),341.3,341.3,Inventor (geometry x density),Designed - 3D printed,Parts\Links\BasePlate.ipt
+2,1,RA-102,"Base housing: J1 bearing boss (2x 6004), J1 motor deck, cable exit",3D printed in-house,PETG (printed),611.4,611.4,Inventor (geometry x density),Designed - 3D printed,Parts\Links\BaseHousing.ipt
+3,1,RA-103,"Turntable with integral 72T m1.5 ring gear (J1), shoulder bracket mount",3D printed in-house,PA6-CF (printed),237.69,237.69,Inventor (geometry x density),Designed - 3D printed,Parts\Links\Turntable.ipt
+4,1,RA-104,"Shoulder cheek, motor side: J2 stepper mount, shaft clamp, bolted foot",3D printed in-house,PA6-CF (printed),68.48,68.48,Inventor (geometry x density),Designed - 3D printed,Parts\Links\ShoulderCheekR.ipt
+5,1,RA-105,"Shoulder cheek, idler side: shaft clamp, bolted foot",3D printed in-house,PA6-CF (printed),53.06,53.06,Inventor (geometry x density),Designed - 3D printed,Parts\Links\ShoulderCheekL.ipt
+6,1,RA-106,"Upper arm half A (+Y): J2 gear side, 6201 seats, belt channel",3D printed in-house,PA6-CF (printed),158.13,158.13,Inventor (geometry x density),Designed - 3D printed,Parts\Links\UpperArmA.ipt
+7,1,RA-107,"Upper arm half B (-Y): J3 stepper mount with 4 mm belt-tension slots, 6201 seats",3D printed in-house,PA6-CF (printed),156.8,156.8,Inventor (geometry x density),Designed - 3D printed,Parts\Links\UpperArmB.ipt
+8,1,RA-108,"Forearm: elbow fork, J4 servo bay with ear posts, 6806 nose bearing seat",3D printed in-house,PA6-CF (printed),202.22,202.22,Inventor (geometry x density),Designed - 3D printed,Parts\Links\Forearm.ipt
+9,1,RA-109,Forearm cover 3 mm (servo bay lid),3D printed in-house,PETG (printed),25.43,25.43,Inventor (geometry x density),Designed - 3D printed,Parts\Links\ForearmCover.ipt
+10,1,RA-110,"Wrist yoke (J4 output): 6806 hub, J5 servo mount, 2x 608 seats for the J5 shaft",3D printed in-house,PA6-CF (printed),58.08,58.08,Inventor (geometry x density),Designed - 3D printed,Parts\Links\WristYoke.ipt
+11,1,RA-111,"Wrist bracket (J5 output) with integral 40T m1.0 gear, J6 servo crossbar",3D printed in-house,PA6-CF (printed),39.33,39.33,Inventor (geometry x density),Designed - 3D printed,Parts\Links\WristBracket.ipt
+12,1,RA-112,"Gripper base: J6 horn flange, gripper servo mount, finger pivot",3D printed in-house,PA6-CF (printed),27.01,27.01,Inventor (geometry x density),Designed - 3D printed,Parts\Links\GripperBase.ipt
+13,1,RA-113,Gripper finger L (servo-driven) with integral 24T m1 gear,3D printed in-house,PA6-CF (printed),5.27,5.27,Inventor (geometry x density),Designed - 3D printed,Parts\Links\FingerL.ipt
+14,1,RA-114,Gripper finger R (idler) with integral 24T m1 gear,3D printed in-house,PA6-CF (printed),5.55,5.55,Inventor (geometry x density),Designed - 3D printed,Parts\Links\FingerR.ipt
+15,1,RA-203,"J2 driven gear 84T m1.75 (20 deg, face 14), bolted to upper arm A",3D printed in-house,PA6-CF (printed),170.74,170.74,Inventor (geometry x density),Designed - 3D printed,Parts\Drive\J2Gear84T.ipt
+16,1,RA-204,"J1 pinion 18T m1.5, D-bore on PG5 8 mm shaft, M3 grub screw",3D printed in-house,PA6-CF (printed),8.65,8.65,Inventor (geometry x density),Designed - 3D printed,Parts\Drive\J1Pinion18T.ipt
+17,1,RA-205,"J2 pinion 18T m1.75, D-bore on PG19 8 mm shaft, M3 grub screw",3D printed in-house,PA6-CF (printed),10.57,10.57,Inventor (geometry x density),Designed - 3D printed,Parts\Drive\J2Pinion18T.ipt
+18,1,RA-206,"J4 pinion 16T m1.25, bolted to 25T servo horn",3D printed in-house,PA6-CF (printed),2.12,2.12,Inventor (geometry x density),Designed - 3D printed,Parts\Drive\J4Pinion.ipt
+19,1,RA-207,"J5 pinion 20T m1.0, bolted to 25T servo horn",3D printed in-house,PA6-CF (printed),2.7,2.7,Inventor (geometry x density),Designed - 3D printed,Parts\Drive\J5Pinion.ipt
+20,1,RA-208,J4 gear 24T m1.25 on the wrist-yoke hub (1.5:1 with the 16T servo pinion),3D printed in-house,PA6-CF (printed),4.84,4.84,Inventor (geometry x density),Designed - 3D printed,Parts\Drive\J4Gear.ipt
+21,1,RA-209,"J3 driven pulley HTD 5M 45T, 16 mm face, D-bore 12 (3:1 with vendor 15T)",3D printed in-house,PA6-CF (printed),48.15,48.15,Inventor (geometry x density),Designed - 3D printed,Parts\Drive\PulleyHTD5M_45T.ipt
+22,1,RA-201,"J1 shaft dia 20 x 62, h6, circlip groove (DIN 471-20)","Machined (or ground rod, cut to length)","Steel, Alloy",162.29,162.29,Inventor (geometry x density),Designed - machined,Parts\Drive\J1Shaft.ipt
+23,1,RA-202,"Shoulder shaft dia 12 x 74 (stationary), flats for M4 set screws",Machined from 12 mm h6 rod,"Steel, Alloy",64.39,64.39,Inventor (geometry x density),Designed - machined,Parts\Drive\ShoulderShaft.ipt
+24,1,RA-210,"Elbow shaft dia 12 x 64, D-flats for pulley and forearm fork",Machined from 12 mm h6 rod,"Steel, Alloy",54.63,54.63,Inventor (geometry x density),Designed - machined,Parts\Drive\ElbowShaft.ipt
+25,1,RA-211,"J5 shaft dia 8 x 84 (fixed in bracket, runs in 2x 608)",8 mm h6 rod cut to length,"Steel, Alloy",32.64,32.64,Inventor (geometry x density),Designed - machined,Parts\Drive\WristShaft.ipt
+26,2,17HS19-1684S-PG19,"Stepper StepperOnline 17HS19-1684S-PG19: NEMA17 48 mm, 1.68 A, 52 N.cm holding + PG19 planetary (19.2:1, 80%, 3 N.m max permissible)",StepperOnline,Steel,600.0,1200.0,estimate (motor 0.36 kg + gearbox),Vendor CAD (step.parts NEMA17 48 mm) + modelled gearbox,Parts\Components\Stepper17HS19_PG19.ipt
+27,1,17HS19-1684S-PG5,"Stepper StepperOnline 17HS19-1684S-PG5: NEMA17 48 mm, 1.68 A, 52 N.cm holding + PG5 planetary (5.18:1, 90%, 3 N.m max permissible)",StepperOnline,Steel,550.0,550.0,estimate (motor 0.36 kg + gearbox),Vendor CAD (step.parts NEMA17 48 mm) + modelled gearbox,Parts\Components\Stepper17HS19_PG5.ipt
+28,2,6004-2RS,Deep-groove ball bearing 6004-2RS (20x42x12),SKF / NSK / any,"Steel, Alloy",69.0,138.0,catalogue,Standard part (modelled),Parts\Hardware\Bearing6004_2RS.ipt
+29,2,608-2RS,Deep-groove ball bearing 608-2RS (8x22x7),step.parts catalogue part,"Steel, Alloy",12.0,24.0,catalogue,Vendor CAD (step.parts STEP),Parts\Hardware\Bearing608_2RS.ipt
+30,4,6201-2RS,Deep-groove ball bearing 6201-2RS (12x32x10),step.parts catalogue part,"Steel, Alloy",37.0,148.0,catalogue,Vendor CAD (step.parts STEP),Parts\Hardware\Bearing6201_2RS.ipt
+31,1,6806-2RS,Deep-groove ball bearing 6806-2RS (30x42x7),SKF / NSK / any,"Steel, Alloy",26.0,26.0,catalogue,Standard part (modelled),Parts\Hardware\Bearing6806_2RS.ipt
+32,2,DS3218-270,"Digital servo DSSERVO DS3218 (270 deg), ~20 kg.cm @6 V stall, 40x20x40.5 case",DSSERVO,ABS Plastic,60.0,120.0,datasheet,Modelled stand-in (datasheet envelope),Parts\Components\ServoDS3218.ipt
+33,2,DS3235-270,"Digital servo DSSERVO DS3235 (270 deg), 32 kg.cm @6 V stall, 40x20x40.5 case",DSSERVO,ABS Plastic,65.0,130.0,datasheet,Modelled stand-in (datasheet envelope),Parts\Components\ServoDS3235.ipt
+34,4,HORN-25T-AL,Aluminium 25T round servo horn dia 25 (disc type),DSSERVO / generic,Aluminum 6061,4.0,16.0,estimate,Standard part (modelled),Parts\Hardware\ServoHorn25T.ipt
+35,1,HTD-375-5M-15,"Timing belt HTD 5M, 375 mm closed loop (75 teeth), 15 mm wide",Gates / any HTD supplier,Rubber,19.0,19.0,estimate ~50 g/m,Purchased (modelled envelope),Parts\Drive\BeltHTD5M_375.ipt
+36,1,HTD5M-15T-15-B8,"Timing pulley HTD 5M 15T, 15 mm belt, 8 mm bore, aluminium",step.parts catalogue part,Aluminum 6061,20.0,20.0,catalogue,Vendor CAD (step.parts STEP),Parts\Drive\PulleyHTD5M_15T_Bore8.ipt
+37,28,ISO4762-M3x10,"Socket head cap screw ISO 4762 M3x10, A2",step.parts catalogue part,"Steel, Alloy",0.99,27.73,Inventor (geometry x density),Vendor CAD (step.parts STEP),Parts\Hardware\ScrewM3x10.ipt
+38,11,ISO4762-M3x8,"Socket head cap screw ISO 4762 M3x8, A2",step.parts catalogue part,"Steel, Alloy",0.87,9.54,Inventor (geometry x density),Vendor CAD (step.parts STEP),Parts\Hardware\ScrewM3x8.ipt
+39,5,ISO4762-M4x12,"Socket head cap screw ISO 4762 M4x12, A2",step.parts catalogue part,"Steel, Alloy",2.14,10.71,Inventor (geometry x density),Vendor CAD (step.parts STEP),Parts\Hardware\ScrewM4x12.ipt
+40,4,ISO4762-M4x16,"Socket head cap screw ISO 4762 M4x16, A2",step.parts catalogue part,"Steel, Alloy",2.53,10.13,Inventor (geometry x density),Vendor CAD (step.parts STEP),Parts\Hardware\ScrewM4x16.ipt
+41,4,ISO4762-M4x30,"Socket head cap screw ISO 4762 M4x30, A2",step.parts catalogue part,"Steel, Alloy",3.89,15.56,Inventor (geometry x density),Vendor CAD (step.parts STEP),Parts\Hardware\ScrewM4x30.ipt
+,99,TOTAL (CAD),,,,,5016.1,,,
+,,of which 3D printed,,,,,2237.5,,,
