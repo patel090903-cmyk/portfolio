@@ -1,0 +1,37 @@
+Item,Qty,Part number,Description,Vendor,Material,Unit mass g,Total mass g,Mass source,CAD source,File
+1,2,GK-101,"Rear-axle bearing hanger, 3/8 in 4130 plate, R25 blends, saddled and TIG-welded to the main rail, 52 bore + 2 x 13.5",Fabricated in-house,AISI 4130 normalised,1279.89,2559.77,Inventor (geometry x density),Designed - welded,Parts\Chassis\BearingHanger.ipt
+2,1,GK-102,"Motor-mount base plate 270 x 142 x 6, A36, welded across the two 1-1/4 cross tubes, 4 x 10.5",Fabricated in-house,ASTM A36 plate,1786.91,1786.91,Inventor (geometry x density),Designed - welded,Parts\Chassis\MotorMountBase.ipt
+3,1,GK-103,"Motor mount bracket, 6061-T6 machined from solid: 3/8 in motor plate + 3/8 in base flange with 4 x 24 mm tensioning slots + 2 gussets",Machined in-house,Aluminium 6061-T6,1964.06,1964.06,Inventor (geometry x density),Designed - machined,Parts\Chassis\MotorMountBracket.ipt
+4,1,GK-301,"Rear live axle 1-1/4 in x 40 in, 4140 pre-hard 28-32 HRC, 1/4 x 1/8 full-length keyway, ends chamfered 1x45",Machined in-house,AISI 4140 pre-hardened,6158.4,6158.4,Inventor (geometry x density),Designed - machined,Parts\Drivetrain\RearAxle.ipt
+5,1,GK-302,"Axle sprocket hub 1-1/4 bore, 1/4 keyseat, flange 104 x 8, 6 x 8.4 on 3.25 in, 2 set screws, 6061-T6",Machined in-house,Aluminium 6061-T6,345.86,345.86,Inventor (geometry x density),Designed - machined,Parts\Drivetrain\AxleSprocketHub.ipt
+6,1,GK-201,"Motenergy ME1114 brushless PMSM, 24-72 V, 0.12 Nm/A, 65 Nm peak, 5000 rpm, 7/8 shaft (catalogue envelope)",Motenergy ME1114 (Thunderstruck EV listing),Aluminium (motor),13150.0,13150.0,datasheet 29 lb,Purchased - catalogue geometry,Parts\Motor\ME1114_Motor.ipt
+7,1,GK-401,"Sprocket ANSI 35 13T, 7/8 bore, 3/16 key, B-hub (PD 39.80, OD 44.36), 1045, hardened teeth","Martin / Tsubaki 35BS13 class, re-bored 7/8","AISI 1045 CD, induction-hardened teeth",87.97,87.97,Inventor (geometry x density),Purchased - catalogue geometry,Parts\Drivetrain\Sprocket35_13T.ipt
+8,1,GK-402,"Kart sprocket ANSI 35 60T plate, 7075-T6 hard anodised, bore 64, 6 x 8.4 on 3.25 in (PD 182.00, OD 187.46)","Kart sprocket, #35 60T 3.25 in 6-bolt class",Aluminium 7075-T6,230.06,230.06,Inventor (geometry x density),Purchased - catalogue geometry,Parts\Drivetrain\Sprocket35_60T.ipt
+9,1,GK-403,"Roller chain ANSI 35 single strand, 98 links incl. connecting link (933.5 mm), min tensile 9.34 kN",Tsubaki / Diamond / D.I.D 35 class,"Steel, Alloy",308.04,308.04,catalogue 0.33 kg/m,Purchased - catalogue geometry,Parts\Drivetrain\Chain35_98L.ipt
+10,2,GK-411,"Rear wheel hub 1-1/4 bore x 80 long, 1/4 keyway, 4-bolt 90 mm flange, 6061-T6 (kart catalogue type)",Kart rear hub 1-1/4 x 3.15 in class,Aluminium 6061-T6,608.32,1216.64,Inventor (geometry x density),Purchased - catalogue geometry,Parts\Wheel\RearWheelHub.ipt
+11,2,GK-421,"Flange housing UCFL206 2-bolt, cast iron, bolt centres 117 (catalogue dimensions)",NTN / FYH / Dodge UCFL206-20 (housing),Cast iron (housing),518.71,1037.41,Inventor (geometry x density),Purchased - catalogue geometry,Parts\Drivetrain\UCFL206_Housing.ipt
+12,2,GK-422,"Insert ball bearing UC206-20, 1-1/4 bore, set-screw locking, C 19.5 kN, C0 11.3 kN",NTN / FYH / Dodge UC206-20 (insert),"Steel, Alloy",393.95,787.91,Inventor (geometry x density),Purchased - catalogue geometry,Parts\Drivetrain\UC206-20_Insert.ipt
+13,1,GK-511,"Square key 1/4 x 1/4 x 40, 1018 CD (sprocket hub)",Key stock (McMaster / equivalent),AISI 1018 CD key stock,12.68,12.68,Inventor (geometry x density),Purchased - catalogue geometry,Parts\Drivetrain\Key_1-4x40.ipt
+14,2,GK-512,"Square key 1/4 x 1/4 x 70, 1018 CD (wheel hubs)",Key stock (McMaster / equivalent),AISI 1018 CD key stock,22.2,44.39,Inventor (geometry x density),Purchased - catalogue geometry,Parts\Drivetrain\Key_1-4x70.ipt
+15,1,GK-513,"Square key 3/16 x 3/16 x 19, 1018 CD (motor sprocket)",Key stock (McMaster / equivalent),AISI 1018 CD key stock,3.38,3.38,Inventor (geometry x density),Purchased - catalogue geometry,Parts\Drivetrain\Key_3-16x19.ipt
+16,2,GK-412,"Kart rim 5 in dia x 5 in wide, cast aluminium (envelope)",Kart wheel 5 x 5 class,Aluminium A356 cast (rim),1000.0,2000.0,estimate (kart 5 x 5 rim ~1.0 kg),Purchased - envelope,Parts\Wheel\Rim5x5.ipt
+17,2,GK-413,"Kart slick 11 x 7.10-5 (rear), envelope",Kart tyre 11x7.10-5 class,Rubber,1700.0,3400.0,estimate (11x7.10-5 slick ~1.7 kg),Purchased - envelope,Parts\Wheel\Tyre11x7-10-5.ipt
+18,4,GK-521,"Hex head cap screw 3/8-16 x 1-1/4, SAE J429 grade 8, zinc-yellow (motor-mount slot bolts)",step.parts (vendor STEP),"Steel, Alloy",27.72,110.88,Inventor (geometry x density),Purchased - step.parts STEP,Parts\Hardware\HexBolt_3-8x1.25.ipt
+19,4,GK-522,"Hex head cap screw 3/8-16 x 1, SAE grade 8 (motor face to mount plate)",step.parts (vendor STEP),"Steel, Alloy",24.22,96.89,Inventor (geometry x density),Purchased - step.parts STEP,Parts\Hardware\HexBolt_3-8x1.00.ipt
+20,4,GK-523,"Hex head cap screw 1/2-13 x 1-1/2, SAE grade 8 (bearing flange to hanger)",step.parts (vendor STEP),"Steel, Alloy",61.57,246.27,Inventor (geometry x density),Purchased - step.parts STEP,Parts\Hardware\HexBolt_1-2x1.50.ipt
+21,6,GK-524,"Socket head cap screw 5/16-18 x 1, ASTM A574 black oxide (sprocket to hub)",step.parts (vendor STEP),"Steel, Alloy",12.12,72.71,Inventor (geometry x density),Purchased - step.parts STEP,Parts\Hardware\SHCS_5-16x1.00.ipt
+22,4,GK-525,"Nylon-insert locknut 3/8-16, grade 8",step.parts (vendor STEP),"Steel, Alloy",14.31,57.26,Inventor (geometry x density),Purchased - step.parts STEP,Parts\Hardware\Locknut_3-8-16.ipt
+23,4,GK-526,"Nylon-insert locknut 1/2-13, grade 8",step.parts (vendor STEP),"Steel, Alloy",33.93,135.73,Inventor (geometry x density),Purchased - step.parts STEP,Parts\Hardware\Locknut_1-2-13.ipt
+24,6,GK-527,"Nylon-insert locknut 5/16-18, grade 8",step.parts (vendor STEP),"Steel, Alloy",8.28,49.7,Inventor (geometry x density),Purchased - step.parts STEP,Parts\Hardware\Locknut_5-16-18.ipt
+25,4,GK-528,"Flat washer DIN 125 M10 (10.5 x 20 x 2), used under the 3/8 slot bolts",step.parts (vendor STEP),"Steel, Alloy",3.87,15.48,Inventor (geometry x density),Purchased - step.parts STEP,Parts\Hardware\Washer_M10_DIN125.ipt
+,60,"TOTAL (CAD, Inventor)",,,,,35878.4,,,
+,,of which designed (welded / machined),,,,,12815.0,,,
+,,of which rear rims + tyres,,,,,5400.0,,,
+,,,,,,,,,,
+,,"NOT MODELLED - electrical system (datasheet-class masses, estimates)",,,,,,,,
+,1,GK-601,"Motor controller, 48 V sine-wave PMSM, sin/cos input, 350 A 2-min (Sevcon Gen4 Size 4 class)",Sevcon / equivalent,,2900,2900,estimate / datasheet class,not modelled,
+,1,GK-602,"16S LiFePO4 40 Ah pack (51.2 V nominal, 2.05 kWh), with BMS",LiFePO4 prismatic pack builder,,20000.0,20000.0,estimate / datasheet class,not modelled,
+,1,GK-603,Main contactor 48 V 200 A + 250 A fuse + key switch,Albright / Gigavac class,,600,600,estimate / datasheet class,not modelled,
+,1,GK-604,Hall throttle pedal 0-5 V,Kart / e-bike pedal,,450,450,estimate / datasheet class,not modelled,
+,1,GK-605,"Phase and battery cable 2 AWG, lugs (estimate)",-,,1200,1200,estimate / datasheet class,not modelled,
+,,TOTAL incl. electrical system,,,,,61028.4,,,
