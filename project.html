@@ -3,35 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Project - Jay Patel</title>
+<title>Jay Patel | Mechanical Engineering Portfolio</title>
+<meta name="description" content="I&#x27;m a mechanical engineering junior at Stevens Institute of Technology. I design complete machines in Autodesk Inventor, from fully constrained assemblies to manufacturing drawings, and check them with analysis I write">
+<link rel="canonical" href="https://patel090903-cmyk.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jay Patel | Mechanical Engineering Portfolio">
+<meta property="og:title" content="Jay Patel | Mechanical Engineering Portfolio">
+<meta property="og:description" content="I&#x27;m a mechanical engineering junior at Stevens Institute of Technology. I design complete machines in Autodesk Inventor, from fully constrained assemblies to manufacturing drawings, and check them with analysis I write">
+<meta property="og:url" content="https://patel090903-cmyk.github.io/portfolio/">
+<meta property="og:image" content="https://patel090903-cmyk.github.io/portfolio/og/home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jay Patel">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jay Patel | Mechanical Engineering Portfolio">
+<meta name="twitter:description" content="I&#x27;m a mechanical engineering junior at Stevens Institute of Technology. I design complete machines in Autodesk Inventor, from fully constrained assemblies to manufacturing drawings, and check them with analysis I write">
+<meta name="twitter:image" content="https://patel090903-cmyk.github.io/portfolio/og/home.jpg">
+<meta name="author" content="Jay Patel">
+<meta name="theme-color" content="#f4f2ed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="robots" content="noindex">
+<script>(function(){var p=new URLSearchParams(location.search).get("p"),ok=["quad-drone", "robotic-arm", "f1-suspension"],f=location.protocol==="file:";location.replace(ok.indexOf(p)>=0?p+(f?"/index.html":"/"):(f?"index.html":"./")+location.hash)})()</script>
+<script>(function(){var t=new URLSearchParams(location.search).get('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316181b'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23f07444' stroke-width='2.6'/%3E%3Cpath d='M16 4v24M4 16h24' stroke='%23f4f2ed' stroke-width='1.6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div class="bar"><div class="wrap"><a class="name" href="index.html" id="owner"></a><a href="index.html">All work</a></div></div>
-<main class="wrap" id="main"></main>
-<footer class="wrap foot"><span>Jay Patel</span><a href="index.html">Back to all work</a></footer>
-<div id="lb"><img alt=""></div>
-<script src="projects.js"></script>
-<script src="render.js"></script>
-<script>
-const P = window.PORTFOLIO;
-document.getElementById('owner').textContent = P.owner;
-const slug = new URLSearchParams(location.search).get('p');
-const idx = P.projects.findIndex(x => x.slug === slug);
-const p = P.projects[idx];
-const main = document.getElementById('main');
-if (!p || p.status !== 'complete') {
-  main.innerHTML = '<p style="padding:56px 0">Project not found. <a href="index.html">Back to all work</a></p>';
-} else {
-  document.title = p.title + ' - ' + P.owner;
-  const next = P.projects.slice(idx + 1).find(x => x.status === 'complete');
-  const prev = P.projects.slice(0, idx).reverse().find(x => x.status === 'complete');
-  main.innerHTML = renderProject(P, idx) +
-    `<div class="pn">${prev ? `<a href="project.html?p=${prev.slug}">&larr; ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a href="project.html?p=${next.slug}">${esc(next.title)} &rarr;</a>` : '<span></span>'}</div>`;
-  initLightbox();
-}
-</script>
+<body data-page="project">
+<a class="skip" href="#main">Skip to content</a>
+<main class="wrap" id="main"><p style="padding:64px 0"><a href="./">Go to the portfolio</a></p></main>
+<dialog id="lb" aria-label="Image viewer">
+  <div class="lbstage"><img alt=""></div>
+  <div class="lbbar"><span class="lbn"></span><p class="lbcap"></p><a class="lbopen" target="_blank" rel="noopener">Full size</a><button type="button" data-go="-1" aria-label="Previous image">&larr;</button><button type="button" data-go="1" aria-label="Next image">&rarr;</button><button type="button" data-go="close" autofocus>Close</button></div>
+</dialog>
+<script src="site.js"></script>
 </body>
 </html>
