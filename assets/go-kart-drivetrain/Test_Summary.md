@@ -46,3 +46,25 @@ Model: `..\GoKartDrivetrain.iam` (driven by the assembly parameters `ChainLine` 
 ## Assumptions
 
 Kart 185 kg with driver, 60 % rear, CG 280 mm, Crr 0.018, CdA 0.54 m2, mu 1.1, rolling radius 137 mm. Motor: Motenergy ME1114 listing values (0.12 Nm/A, 65 Nm, 5000 rpm, 6.5 mOhm, 29 lb); rotor inertia, face bolt pattern and outer shape assumed. Controller 350 A / 250 A battery, 16S LiFePO4 40 Ah 30 mOhm (class assumptions, not modelled). Quasi-static limit loads, linear-elastic FEA without weld fillets or keys. Materials: 6061-T6 Sy 276, 4130 Sy 460 (HAZ 360), 4140 PH Sy 655 / Su 1020 MPa. Purchased parts without vendor CAD are catalogue-dimension models; fasteners are step.parts STEP files. Not modelled: seat, brakes, chain guard, steering, electrical installation.
+
+
+## Respec 2026-10-29 (working-model + BOM audit)
+
+The buildability audit found the #35 chain at 99-126 % of its working allowable and no brake. Changes, all in the CAD, the BOM and `Analysis\analysis.json` (re-run of `drivetrain_analysis.py`):
+
+| Item | Before | After | Status |
+|---|---|---|---|
+| Chain | ANSI #35, 98 links, 13T / 60T = 4.615:1 | ANSI #40, 78 links (285.4 mm centres), Martin 40BS13 7/8 + 40BS50 1-1/4 = 3.846:1 | respecced |
+| Axle sprocket mount | 7075 plate on a bolt-on 6061 hub, 6 x 5/16 bolts | 40BS50 keyed straight to the axle (hub + 6 bolts deleted) | respecced |
+| Chain load at launch | 2.10 kN = 99 % of the #35 allowable (126 % at 450 A) | 1.57 kN = 44 % of the #40 allowable (3.6 kN); 2.24 kN = 62 % at the traction limit; SF 8.6 on ultimate | PASS |
+| 0-25 mph (nominal pack) | 1.98 s | 2.14 s (2.19 s on a low pack), still < 4 s | PASS |
+| Free top speed | 27.3 mph | 32.5 mph (controller governs at 25 mph) | - |
+| Start gradeability | 91 % | 76 % (traction-limited) | PASS |
+| Axle static SF (with Kt) | 2.69 | 2.86 (chain load lower) | PASS |
+| Ground clearance under the axle sprocket | 43 mm | 32 mm | report |
+| Brake | none | 180 mm disc on a keyed 1-1/4 in hub (right side), single-piston hydraulic caliper on a 1/4 in bracket welded to the right hanger, master cylinder + line (GoPowerSports kit) | added |
+| Guard | none | 1.5 mm steel side plate + top cover over the tight span | added |
+| Motion | static (only ChainLine / ChainAdjust) | `Drive` turns the axle, wheels, brake disc and (x 50/13) the motor shaft + 13T: measured error 0.0 deg; chain seats exactly at whole-tooth steps | added |
+| Interference | - | 0 pairs at Drive 0 / 2 / 13 / 26 axle teeth (chain included), Drive 37 deg and ChainAdjust +-12 mm (chain excluded): `Working_Model_Check\` | PASS |
+
+Not re-run: the FEA (the chain pull on the hanger and bracket dropped 25 %, so the old results are conservative) and the calc report PDF / drawings (they still show the #35 first design). Open: brake torque of the single-piston caliper (about 127 N.m needed at the axle; ask the vendor), caliper bracket weld check, rim width, UCFL206 hole size.
