@@ -18,7 +18,7 @@ Item,Qty,Part number,Description,Vendor / source,Material,Unit mass g,Total mass
 17,1,GM-302,Parallel key DIN 6885 A 5 x 5 x 16 (table hub),DIN 6885 A (McMaster / Misumi),C45 key steel (DIN 6885),2.93,2.93,Inventor (geometry x density),1.5,1.5,estimate,Purchased - catalogue geometry,Parts\Geneva\Key_DIN6885A_5x5x16.ipt
 18,4,GM-401,"Deep groove ball bearing SKF 6204-2RSH 20 x 47 x 14, sealed: C 13.5 kN, C0 6.55 kN (4: two per shaft, cross-located)",SKF 6204-2RSH,Bearing steel (52100),110.0,440.0,catalogue,9.0,36.0,est.: distributor class price,Purchased - catalogue geometry,Parts\Purchased\Bearing_6204-2RSH.ipt
 19,1,GM-402,"Stud type track roller (cam follower) INA KR16-PP: D 16, C 11, stud 6 x 16, M6x1, Cr 3200 N, C0r 3450 N (Schaeffler medias); drive roller, nut 3 Nm",Schaeffler (INA) KR16-PP,Bearing steel (52100),19.0,19.0,catalogue (approx.),22.0,22.0,est.: distributor listings EUR 15-45,Purchased - catalogue geometry,Parts\Purchased\CamFollower_KR16-PP.ipt
-20,1,GM-403,"Hex nut M6x1 thin (supplied with the KR16-PP), 3 Nm",Schaeffler (with KR16-PP),"Steel, black oxide class 12.9",1.47,1.47,Inventor (geometry x density),0.0,0.0,included,Purchased - catalogue geometry,Parts\Hardware\Nut_M6x1_thin.ipt
+20,1,GM-403,"Hex nut M6x1 thin (supplied with the KR16-PP), 3 Nm",Schaeffler (with KR16-PP),"Steel, black oxide class 12.9",1.47,1.47,Inventor (geometry x density),0.0,0.0,part of GM-402 (nut supplied with the KR16-PP),Purchased - catalogue geometry,Parts\Hardware\Nut_M6x1_thin.ipt
 21,1,GM-405,"Ruland MJC41-20-A jaw coupling hub, 41.3 OD, 20 mm clamp bore (crank shaft)",Ruland MJC41-20-A,Aluminium 7075 (Ruland hub),47.54,47.54,Inventor (geometry x density),32.0,32.0,confirmed: RS Hong Kong HKD 248.80 (about USD 32),Purchased - catalogue geometry,Parts\Purchased\CouplingHub_MJC41-20-A.ipt
 22,1,GM-406,"Ruland MJC41-14-A jaw coupling hub, 41.3 OD, 14 mm clamp bore (gearbox shaft)",Ruland MJC41-14-A,Aluminium 7075 (Ruland hub),55.02,55.02,Inventor (geometry x density),34.0,34.0,confirmed: RS UK GBP 26.71 ex VAT (about USD 34),Purchased - catalogue geometry,Parts\Purchased\CouplingHub_MJC41-14-A.ipt
 23,4,GM-501,"Hex standoff M5 female-female, 8 AF x 60, aluminium (McMaster 94868A class)",McMaster-Carr hex standoff M5 x 60,Aluminium 6061-T6,7.71,30.83,Inventor (geometry x density),4.0,16.0,estimate,Purchased - catalogue geometry,Parts\Hardware\Standoff_M5x60_hex8.ipt
@@ -32,7 +32,7 @@ Item,Qty,Part number,Description,Vendor / source,Material,Unit mass g,Total mass
 31,1,GM-518,"Set screw ISO 4029 M6 x 8 cup point (table hub onto the shaft, Loctite 243)","ISO 4029 cup point, 45H","Steel, black oxide class 12.9",1.52,1.52,Inventor (geometry x density),0.3,0.3,estimate,Purchased - catalogue geometry,Parts\Hardware\SetScrew_M6x8.ipt
 32,1,GM-404,"Stepper gearmotor Oriental Motor PKP264D14A2-PLE60-5B: NEMA 23 (56.4 mm) 2-phase, 1.4 A, 2.1 ohm, 6 mH, Neugart PLE60 5:1 planetary (10 arcmin), 14 mm shaft; 464 oz-in (3.28 Nm) holding at the output; total length 4.44 in. Envelope model: motor / adapter split and connector assumed",Oriental Motor PKP264D14A2-PLE60-5B,Steel / aluminium (stepper gearmotor),1650.0,1650.0,est.: PLE60 0.9 kg (Neugart) + 56 mm motor ~0.75 kg,502.5,502.5,confirmed: catalog.orientalmotor.com web price 2026-10-29,Purchased - envelope,Parts\Purchased\GearMotor_PKP264D14A2-PLE60-5B.ipt
 33,1,GM-407,"Ruland MJC41 jaw spider, 98 Shore A urethane (stiffest option); envelope of the spider + jaw overlap",Ruland MJC41 spider 98A,Polyurethane 98 Shore A (spider),13.69,13.69,Inventor (geometry x density),12.0,12.0,est.,Purchased - envelope,Parts\Purchased\CouplingSpider_MJC41-98A.ipt
-,91,"TOTAL (CAD, Inventor)",,,,,23200.9,,,1581.4,"confirmed 568.50, rest estimates",,
+,91,"TOTAL (CAD, Inventor)",,,,,23200.9,,,1581.4,mixed: $568.5 confirmed + $1012.9 est.,,
 ,,,,,,,,,,,,,
 ,,NOT MODELLED - needed to run it (estimates),,,,,,,,,,,
 ,1,GM-601,"Stepper driver for 1.4 A / 24-48 V, 1/16 microstep or finer (Oriental CVD or StepperOnline DM542T class)",,,,,,40,40,est.,not modelled,
@@ -41,4 +41,4 @@ Item,Qty,Part number,Description,Vendor / source,Material,Unit mass g,Total mass
 ,1,GM-604,"Controller: Arduino Uno R4 / small PLC, start / stop push buttons, E-stop",,,,,,60,60,est.,not modelled,
 ,1,GM-605,Guard: 3 mm polycarbonate panels round the Geneva and the coupling (pinch points),,,,,,40,40,est.,not modelled,
 ,1,GM-606,"Grease (lithium EP 2) on the roller and slot flanks, Loctite 243, 4 x M10 bench bolts",,,,,,15,15,est.,not modelled,
-,,TOTAL incl. not modelled,,,,,,,,1811.4,mostly estimates,,
+,,TOTAL incl. not modelled,,,,,,,,1811.4,mixed: $568.5 confirmed + $1242.9 est.,,
