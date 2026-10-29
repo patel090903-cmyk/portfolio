@@ -4,7 +4,7 @@
 
   // Source preview: the built pages arrive prerendered; the source pages render themselves from projects.js.
   if (!d.getElementById('main') && window.PR && window.PORTFOLIO) {
-    const P = window.PORTFOLIO, kind = body.dataset.page, ctx = { root: '', mode: kind === '1p' ? '1p' : 'dev' };
+    const P = window.PORTFOLIO, kind = body.dataset.page, ctx = { root: '', mode: kind === '1p' ? '1p' : 'dev', parts: window.PARTS };
     let idx = -1;
     if (kind === 'project') {
       idx = P.projects.findIndex(x => x.slug === new URLSearchParams(location.search).get('p') && x.status === 'complete');
