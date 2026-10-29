@@ -1,4 +1,4 @@
-﻿/* Engineering portfolio: drawing-sheet look. Paper, ink, thin rules, square corners, one orange accent. */
+/* Engineering portfolio: drawing-sheet look. Paper, ink, thin rules, square corners, one orange accent. */
 :root {
   --paper: #f4f2ed; --sheet: #fbfaf7; --ink: #16181b; --text: #26292d; --mute: #5c5f65; --rule: #16181b; --hair: #d5d2c9;
   --mark: #b83c12; --frame: #ffffff; --shade: rgba(22, 24, 27, .06);
@@ -248,6 +248,89 @@ table.res td:last-child { font: 400 13px/1.5 var(--mono); color: var(--mute); wi
 .files li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--hair); font-size: 15.5px; }
 .files a { font-weight: 500; color: var(--ink); }
 .files .ext { font: 400 12px var(--mono); color: var(--mute); white-space: nowrap; }
+
+/* parts list */
+.plintro { margin: 0 0 18px; max-width: 76ch; font-size: 15px; color: var(--text); }
+.plintro b { font-weight: 600; }
+dl.stats.pl dd { font-size: clamp(24px, 3vw, 32px); }
+.plcost { display: grid; gap: 14px 28px; grid-template-columns: 1fr; margin: 18px 0 0; padding: 16px 18px 18px; border: 1px solid var(--rule); background: var(--sheet); }
+@media (min-width: 820px) { .plcost { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); align-items: center; } .plcost .plbar, .plcost .plsplit { grid-column: 2; } .plcost .pltot { grid-row: 1 / span 2; } .plcost.none { grid-template-columns: 1fr; } }
+.pltot span { display: block; font: 400 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); }
+.pltot b { display: block; font-size: clamp(28px, 3.6vw, 38px); font-weight: 600; line-height: 1.15; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.pltot small { display: block; font-size: 13px; color: var(--mute); line-height: 1.45; margin-top: 2px; }
+.plcost.none .pltot b { font-size: 24px; }
+.plbar { display: flex; height: 12px; border: 1px solid var(--rule); background: var(--paper); }
+.plbar i { display: block; height: 100%; }
+.plbar i.c { background: var(--ink); }
+.plbar i.e { background: repeating-linear-gradient(135deg, var(--mute) 0 1px, transparent 1px 5px); }
+dl.plsplit { margin: 0; display: flex; flex-wrap: wrap; gap: 8px 28px; }
+dl.plsplit div { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+dl.plsplit dd { margin: 0; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+dl.plsplit dd small { font: 400 12px var(--mono); color: var(--mute); margin-left: 4px; }
+.pt { display: inline-block; font: 500 10px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 3px 5px 2px; border: 1px solid var(--hair); color: var(--mute); white-space: nowrap; vertical-align: 1px; }
+.pt.c { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.pt.e { border-style: dashed; border-color: var(--mute); }
+.pt.nm, .pt.n { border-color: var(--mark); color: var(--mark); }
+.pt.blk { background: var(--mark); border-color: var(--mark); color: #fff; }
+.plflag { margin: 14px 0 0; padding: 11px 16px; border: 1px solid var(--rule); border-left: 4px solid var(--mark); background: var(--sheet); font-size: 15px; max-width: 900px; }
+.plflag.ok { border-left-color: var(--ink); }
+.plflag b { font-weight: 600; }
+.plflag + h3.g { margin-top: 36px; }
+.proj h3.g small { font: 400 12px var(--mono); letter-spacing: .04em; color: var(--mute); margin-left: 6px; font-weight: 400; }
+#main .block h3.g[id] { scroll-margin-top: 64px; }
+table.pl { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+table.pl thead th { text-align: left; font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); padding: 10px 14px 10px 0; border-bottom: 1px solid var(--rule); }
+table.pl td { padding: 11px 14px 11px 0; border-bottom: 1px solid var(--hair); vertical-align: top; text-align: left; }
+table.pl .q { width: 52px; font: 500 14px var(--mono); color: var(--ink); font-variant-numeric: tabular-nums; }
+table.pl .pno { width: 150px; font: 400 12.5px/1.5 var(--mono); color: var(--ink); overflow-wrap: anywhere; }
+table.pl .d { line-height: 1.5; color: var(--text); }
+table.pl .d .pt { margin-left: 8px; }
+table.pl .m { display: block; margin-top: 4px; font-size: 12.5px; line-height: 1.45; color: var(--mute); }
+table.pl .pr { width: 96px; text-align: right; padding-right: 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+table.pl .pr.u { color: var(--mute); }
+table.pl td.pr.l .pt { display: block; width: max-content; margin: 4px 0 0 auto; }
+table.pl .ea { display: none; }
+table.pl tfoot td { border-bottom: 0; border-top: 1px solid var(--rule); font: 500 12px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--mute); padding-top: 10px; }
+table.pl tfoot td.pr b { font: 600 15px var(--sans); letter-spacing: 0; text-transform: none; color: var(--ink); }
+table.pl tbody tr:hover { background: var(--shade); }
+@media (max-width: 640px) {
+  table.pl thead { display: none; }
+  table.pl, table.pl tbody, table.pl tfoot { display: block; width: 100%; }
+  table.pl tr { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 2px 10px; padding: 12px 0; border-bottom: 1px solid var(--hair); }
+  table.pl td { display: block; border: 0; padding: 0; width: auto !important; }
+  table.pl .q { grid-column: 1; grid-row: 1; }
+  table.pl .pno { grid-column: 2; grid-row: 1; padding-top: 1px; }
+  table.pl .pr.u { display: none; }
+  table.pl .pr.l { grid-column: 3; grid-row: 1 / span 2; }
+  table.pl .d { grid-column: 1 / -1; grid-row: 2; }
+  table.pl.priced .d { grid-column: 1 / 3; }
+  table.pl .ea { display: block; font-size: 11.5px; color: var(--mute); margin-top: 3px; }
+  table.pl tfoot tr { border-bottom: 0; border-top: 1px solid var(--rule); grid-template-columns: 1fr auto; }
+  table.pl tfoot td { border: 0; padding: 0; }
+  table.pl tfoot td:first-child { grid-column: 1; } table.pl tfoot td.pr.l { grid-column: 2; grid-row: 1; }
+}
+.plwrap { border-top: 1px solid var(--rule); padding-top: 14px; max-width: 980px; }
+.plsrc { margin: 0 0 14px; font-size: 14.5px; color: var(--mute); }
+.plsrc code { font: 400 12.5px var(--mono); color: var(--ink); overflow-wrap: anywhere; }
+.plsrc b { color: var(--ink); font-weight: 600; }
+h4.plh { margin: 22px 0 10px; font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); }
+h4.plh.warn { color: var(--mark); }
+ul.plmiss { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--hair); }
+ul.plmiss li { display: grid; grid-template-columns: 86px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--hair); }
+ul.plmiss li > span { padding-top: 2px; }
+ul.plmiss p { margin: 0; font-size: 15px; line-height: 1.5; }
+ul.plmiss small, ol.plchg small { font: 400 12px var(--mono); color: var(--mute); white-space: nowrap; }
+ul.plmiss small.from, ol.plchg small.from { white-space: normal; }
+ol.plchg { margin: 0; padding: 0; list-style: none; counter-reset: c; border-top: 1px solid var(--hair); }
+ol.plchg li { position: relative; padding: 10px 0 10px 34px; border-bottom: 1px solid var(--hair); font-size: 15px; line-height: 1.5; counter-increment: c; }
+ol.plchg li::before { content: counter(c, decimal-leading-zero); position: absolute; left: 0; top: 12px; font: 500 11.5px var(--mono); color: var(--mark); }
+dl.plneed { margin: 0; border-top: 1px solid var(--hair); }
+dl.plneed div { display: grid; grid-template-columns: 1fr; gap: 2px 16px; padding: 10px 0; border-bottom: 1px solid var(--hair); }
+@media (min-width: 700px) { dl.plneed div { grid-template-columns: 150px 1fr; } }
+dl.plneed dt { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); padding-top: 3px; }
+dl.plneed dd { margin: 0; font-size: 15px; line-height: 1.5; }
+.files.pldl { margin-top: 28px; }
+@media print { table.pl tr, ul.plmiss li, ol.plchg li, dl.plneed div { break-inside: avoid; } .plbar i.c { background: #000; } }
 
 /* limits */
 .note { border: 1px solid var(--rule); border-left: 4px solid var(--mark); background: var(--sheet); padding: 18px 22px; max-width: 900px; }
