@@ -1,6 +1,6 @@
 case,chain T N,axle T Nm,wheel L Fz,wheel R Fz,wheel L Fy,wheel R Fy,brg L Fr,brg R Fr,axial/brg,axle Mb max Nm,axle vm MPa,SF yield,note
-C1 launch,2095,188.8,728,728,0,0,2618,1186,0,230,78,8.40,"full motor torque 350 A (42 Nm), 0.75 g launch with load transfer"
-C2 bump 2.5g,129,11.6,1361,1361,0,0,1367,1362,0,313,100,6.57,2.5 g vertical on both rear wheels at 25 mph cruise torque
-C3 corner 1.5g,1048,94.4,1089,0,-1633,-0,2153,121,817,171,60,10.86,"1.5 g right turn, inner (right) rear lifted, outer (left, sprocket side) wheel carries the whole rear load and side force, 50 % torque on exit"
-C3R corner 1.5g,1048,94.4,0,1089,0,1633,684,1543,817,171,60,10.84,"mirror of C3: left turn, outer = right wheel"
-C4 kerb 2g+1g,2095,188.8,2178,544,-1089,-0,4065,310,544,434,144,4.54,"2 x rear-axle load on the left wheel (kerb strike), 1.0 g side load, full torque"
+C1 launch,1572,157.3,728,728,0,0,2066,1050,0,213,71,9.18,"full motor torque 350 A (42 Nm), 0.75 g launch with load transfer"
+C2 bump 2.5g,114,11.4,1361,1361,0,0,1364,1362,0,313,100,6.57,2.5 g vertical on both rear wheels at 25 mph cruise torque
+C3 corner 1.5g,786,78.7,1089,0,-1633,-0,1832,114,817,170,58,11.25,"1.5 g right turn, inner (right) rear lifted, outer (left, sprocket side) wheel carries the whole rear load and side force, 50 % torque on exit"
+C3R corner 1.5g,786,78.7,0,1089,0,1633,495,1422,817,170,58,11.23,"mirror of C3: left turn, outer = right wheel"
+C4 kerb 2g+1g,1572,157.3,2178,544,-1089,-0,3537,264,544,410,135,4.85,"2 x rear-axle load on the left wheel (kerb strike), 1.0 g side load, full torque"
