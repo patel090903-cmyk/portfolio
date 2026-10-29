@@ -1,0 +1,21 @@
+Item,Qty,Part / part number,Manufacturer,Key specs (verified),Approx price USD (line),Price source,Verified?,CAD vs datasheet
+Motor,4,AIR2216 II KV920 (buy 2 CW-thread + 2 CCW-thread if sold that way),T-Motor,"64+/-2 g incl cable; 17 A / 272 W peak (180 s); 4S; 115 mOhm",90 (Air Gear 450 II no-ESC combo incl 4 T1045 props),ligpower.com Air Gear 450II combo no ESC $89.99,"Specs yes; mount pattern NOT published (CAD 16x19 M3; one reseller says 16x16)","Mass matches CAD 64 g. Mount pattern + prop-thread unverified: measure motor before printing arms"
+Propeller,4+4 spare,T1045 (II) self-tightening 10x4.5 CW/CCW,T-Motor,"13 g each, 1.2 kg thrust limit, nylon+GF",15 (spares),estimate,Yes (spec); price estimate,"CAD adds a separate M6 prop nut (BOM item 13). Air Gear T1045 are self-tightening props: nut likely not needed / wrong"
+ESC,4,XRotor Micro BLHeli-S 30A DShot600 (30901075),Hobbywing,"30 A cont / 40 A peak, 2-4S, no BEC, 23.8x14.5x5.8 mm, 6 g, DShot600",70,estimate (no list price found; stock patchy),Specs yes; price/stock NO,"Matches CAD 23.8x14.5x5.8 / 6 g. Marketed for 150-280 mm FPV; works with 2216 but Holybro BLHeli_S 20A (X500 V2) is the easier-to-buy alternative"
+Flight controller,1,Pixhawk 6C (aluminium case),Holybro,"84.8x44x12.4 mm, 59.3 g",190,racedayquads.com $189.99,Yes,Matches CAD exactly
+GPS,1,M9N GPS (V1 standard 10-pin; has safety switch + buzzer),Holybro,"50 mm puck, 32 g",75,pyrodrone.com $74.99,Yes,"Matches CAD. Buy V1 (V2 IP67 drops switch+buzzer)"
+Power module,1,PM02 V3,Holybro,"60 A rated, 120 A <60 s, 5.2 V/3 A, 20 g",30,estimate,Specs yes (docs.px4.io); price estimate,"CAD/BOM calls it 'PDB with 4 ESC pads' - it is NOT a PDB. Full throttle 66 A > 60 A rated (OK as <60 s burst)"
+Battery,1 (2 recommended),Gens Ace 5000 mAh 4S1P 14.8 V 45C,Gens Ace,"154x46x30 mm, 480+/-20 g (BuddyRC); some 45C SKUs are 160x45x34 mm / 550 g",79,buddyrc.com $78.96 (Deans plug),Yes,"Fits tray only in the 154x46x30 SKU; ships with Deans/EC5/T - re-terminate to XT60"
+Gimbal + camera,1,2-axis micro brushless gimbal + 1/2.3 in action cam (generic),UNSPECIFIED,none,150,estimate,NO - no real part number,"CAD envelope + 110 g are estimates; pick a real gimbal and re-check the damper plate holes"
+Ball dampers,8,Silicone ball damper 12 mm (M3 plate type),Generic,-,8,estimate,NO (generic),Neck hole 6 mm in CAD - check against the set you buy
+Mounting foam,1,3M 4026 double-sided foam,3M,-,5,estimate,Yes (common item),-
+Battery straps,2,20x250 mm hook-and-loop strap,Generic,-,6,estimate,generic,Strap slots 3x22 mm in CAD OK for 20 mm strap
+Screws/nuts,1 kit,"ISO 4762 M3 x6 x8 x12 x30 x35 A2 + ISO 10511 M3 nylock",any,-,20,estimate,standard,"Lengths check out: clamp stack 27 mm + nut on M3x35; leg 24 mm + nut on M3x30"
+Standoffs,8,M3x35 and M3x10 F-F 5 mm AF aluminium,any,-,8,estimate,standard,-
+NOT IN BOM - RC link,1,ELRS transmitter + receiver (e.g. RadioMaster Pocket + RP1),RadioMaster,-,90,estimate,not verified,"Needed to arm/fly under PX4/ArduPilot. No mount in CAD (zip-tie under hatch)"
+NOT IN BOM - PDB,1,Power distribution board XT60 + 4 ESC pads (e.g. Holybro / Matek FCHUB class),various,>=80 A,15,estimate,not verified,No space reserved in CAD - fits on bottom plate under top plate
+NOT IN BOM - wiring,1,"XT60 pigtails, 3.5 mm bullets, 14/18 AWG silicone wire, heat-shrink",various,-,20,estimate,-,-
+NOT IN BOM - telemetry (optional),1,SiK telemetry radio V3 915 MHz pair,Holybro,-,60,estimate,not verified,optional
+NOT IN BOM - charger,1,4S balance charger >=100 W,any,-,60,estimate,-,-
+Filament,1 kg,PA6-CF (or PAHT-CF),Bambu / Polymaker,"hardened nozzle, enclosure, dried 80 C",70,estimate,-,"434.5 cm3 of parts = ~520 g at 1.2 g/cm3 solid; ~1 kg spool with supports/waste"
+TOTAL (approx),,,,,~1060 (incl optional telemetry 60; ~1000 without; ~850 without gimbal+camera),,,
