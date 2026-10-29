@@ -21,8 +21,8 @@ Item,Qty,Part number,Description,Vendor / source,Material,Unit mass g,Total mass
 20,4,SL-511,"Socket head cap screw ISO 4762 M6 x 20, 8.8 (flange nut to carriage, 4)",ISO 4762 class 8.8 / 12.9,"Steel, class 8.8 zinc plated",7.4,29.5,Inventor (geometry x density),0.3,1.2,est.,Purchased - catalogue geometry,Parts\Hardware\SHCS_M6x20.ipt
 21,4,SL-512,"Socket head cap screw ISO 4762 M8 x 20, 8.8 (drive block to base, 4)",ISO 4762 class 8.8 / 12.9,"Steel, class 8.8 zinc plated",14.8,59.3,Inventor (geometry x density),0.4,1.6,est.,Purchased - catalogue geometry,Parts\Hardware\SHCS_M8x20.ipt
 22,4,SL-513,"Socket head cap screw ISO 4762 M6 x 16, 8.8 (gearmotor to motor plate, 4)",ISO 4762 class 8.8 / 12.9,"Steel, class 8.8 zinc plated",6.5,26.1,Inventor (geometry x density),0.3,1.2,est.,Purchased - catalogue geometry,Parts\Hardware\SHCS_M6x16.ipt
-23,1,SL-205,"Geared BLDC motor StepperOnline M82B200-24P-30S/G82-71.5S1: 24 V, 200 W, 71.5:1 planetary, rated 33 Nm at 42 rpm (listing). Envelope model: flange / shaft / lengths assumed, check the vendor drawing",StepperOnline M82B200-24P-30S/G82-71.5S1,Aluminium / steel (gearmotor),3600.0,3600.0,estimate (200 W BLDC + 3-stage planetary),240,240,"est.: StepperOnline 200 W geared BLDC class, price not shown in search results",Purchased - envelope,Parts\Drive\GearMotor_M82B200_G82-71.5.ipt
-,76,"TOTAL (CAD, Inventor)",,,,,80810.7,,,1128.0,estimates,,
+23,1,SL-205,"Geared BLDC motor StepperOnline M82B200-24P-30S/G82-71.5S1: 24 V, 200 W, 71.5:1 planetary, rated 33 Nm at 42 rpm (listing). Envelope model: flange / shaft / lengths assumed, check the vendor drawing",StepperOnline M82B200-24P-30S/G82-71.5S1,Aluminium / steel (gearmotor),3600.0,3600.0,estimate (200 W BLDC + 3-stage planetary),70.5,70.5,"confirmed (listing): StepperOnline M82B200-24P-30S/G82-71.5S1, $70.50 (checked 2026-10-29); listing shows a keyed 19 x 49 mm shaft (CAD envelope 16 mm)",Purchased - envelope,Parts\Drive\GearMotor_M82B200_G82-71.5.ipt
+,76,"TOTAL (CAD, Inventor)",,,,,80810.7,,,958.5,mixed: $70.5 confirmed + $888 est.,,
 ,,,,,,,,,,,,,
 ,,NOT MODELLED - needed to run it (estimates),,,,,,,,,,,
 ,1,SL-601,"BLDC driver StepperOnline BLD-515C class (24-48 V, 15 A), current limit set for 21 Nm at the screw",,,,,,60,60,est.,not modelled,
@@ -33,4 +33,4 @@ Item,Qty,Part number,Description,Vendor / source,Material,Unit mass g,Total mass
 ,1,SL-606,"Maintenance prop (steel bar between base and platform, for working under the deck)",,,,,,15,15,est.,not modelled,
 ,1,SL-607,Sheet-metal guard over the coupling and gearmotor,,,,,,20,20,est.,not modelled,
 ,1,SL-608,"Grease (lithium EP 2) for the nut and screw, threadlocker",,,,,,10,10,est.,not modelled,
-,,TOTAL incl. not modelled,,,,,,,,1373.0,estimates,,
+,,TOTAL incl. not modelled,,,,,,,,1203.5,mixed: $70.5 confirmed + $1133 est.,,
