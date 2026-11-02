@@ -40,3 +40,21 @@ Model: `..\ConveyorSorter.iam` (assembly parameters `TakeUp`, `Divert1`, `Divert
 ## Assumptions
 
 Belt class values (2.4 kg/m2, 5 N/mm at 1 %, mu 0.30 on the slider bed, 0.25 on the bare pulley, 0.50 carton on PVC). goBILDA 5203 datasheet values (117 rpm, 6.71 Nm, 9.2 A); rotor inertia and face pattern assumed. Savox SB-2290SG 50 kg cm at 7.4 V, 0.15 s deploy with latency. ToF noise 3 mm per sample. Items uniform in size, up to 1.5 kg, centred between the guides; a metering infeed (not modelled) sets the gap. 40x80 rail Ix 44 cm4. Not modelled: infeed, wiring, firmware, belt splice. No FEA: the highest stress is 25 MPa (paddle), so beam theory is enough.
+
+
+## Respec 2026-10-29 (open buildability items settled; decisions taken by the assistant under Jay's authority)
+
+**Decisions recorded:** (1) outriggers instead of floor anchors; (2) jaw coupling upgraded L-070 -> Lovejoy L-075. Designed and calculated only; nothing has been built.
+
+| Item | Before | After | Status | Files |
+|---|---|---|---|---|
+| Sideways stability | 270 mm foot track, tips at 58 N at belt height (12.5 deg tilt); 4 x M8 floor anchors required | two 40x40 x 700 outriggers (CS-116) under the leg pairs, feet at +-325 mm (650 mm track): tips at 144 N (29.0 deg tilt), SF 1.44 vs an assumed 100 N bump; legs 614 -> 574 mm; Bin2 moved +90 mm in Y (10 mm from the outrigger). A 300 N push would still need anchors (90 N uplift each, SF 44) | fixed (no floor drilling) | Structure\frame_stability.png, ..\Analysis\analysis.json `frame` |
+| Coupling | L-070, 4.88 Nm = 0.73 x motor stall | L-075, 10.2 Nm = 1.52 x stall; SF 10.7 normal / 3.55 at the 7-carton jam | fixed | ..\Parts\Purchased\JawCoupling_L075.ipt |
+| Coupling fit (bigger hub) | 2.0 mm to the gearmotor's M4 heads, 6.0 to the mount, 5.2 to the bearing unit | motor-mount stand-off +5 mm (motor face Y -260 -> -265), low-head DIN 7984 M4 x 10: 3.0 mm to the screw heads, 5.8 mm to the mount, 6.6 mm to the bearing unit (Inventor minimum distance); shaft engagement 12 mm motor side, 17 mm head-shaft side | PASS | ..\Parts\Conveyor\MotorMount.ipt |
+| Working model | 104 occ | 106 occ, 315 constraints, 0 DOF, 0 unhealthy, 0 interfering pairs at 7 poses (design, Divert1/2 20 and 40 deg, TakeUp +-15) | PASS | Working_Model_Check\working_model_check.json |
+| Mass | 32.7 kg machine | 34.7 kg machine (+2 outriggers 2.1 kg) | - | ..\ConveyorSorter_BOM.csv |
+| BOM | $2,833 | $2,894: floor anchors replaced by 4 x M8 x 55 leg bolts + 8 corner brackets, outriggers, L-075 price | done | ..\ConveyorSorter_BOM.csv |
+| Through-beam quantity | flagged | BOM qty 2 = one E3Z-T61 emitter + receiver set, priced per half ($90 each) - already correct | closed | - |
+| Calc report / drawings | anchors, L-070 | regenerated | done | ..\Analysis\ConveyorSorter_CalcReport.pdf, ..\Drawings\*.pdf |
+
+Still open: the Arduino firmware is not written; the L-075 rating (90 in-lb) and its minimum bore for the 8 mm motor shaft come from reseller listings, so confirm both in the Lovejoy catalogue; the goBILDA face pattern is still assumed.
