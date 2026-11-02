@@ -1,4 +1,4 @@
-# ConveyorSorter - buildability check (2026-10-29)
+﻿# ConveyorSorter - buildability check (2026-10-29)
 
 Question: if Jay orders these parts, has the plates machined and prints the printed parts, does it go together and work? This
 check uses the CAD (Inventor measurements in `..\Assembly_Checks\` and `..\Working_Model_Check\`), the calculations in
@@ -68,6 +68,9 @@ SendCutSend-class slider bed, paddles and chutes.
 | Stability | unanchored it tips at 54 N sideways at belt height; with 4 x M8 anchors 341 N uplift each at 300 N (SF 12) |
 
 ## 6. Open items: settle these before ordering
+
+**Update 2026-10-29 (respec):** items 1 and 2 are done - the L-075 coupling is in the CAD with a 5 mm longer motor-mount stand-off and low-head screws (3.0 mm to the screw heads), and outriggers (650 mm foot track, tips at 144 N instead of 58 N) replace the floor anchors. Item 3 was already correct in the BOM (qty 2 halves = one set). Items 4-5 stay open. See `..\Summary.md`, section "Respec 2026-10-29".
+
 
 1. **Coupling upgrade (L-070 -> L-075, 10.2 Nm).** The respec choice, but it does not drop in: the L-075 hub is 9.9 mm larger in
    diameter (34.5 -> 44.5 mm) and 3.8 mm longer, and the CAD shows only 2.0 mm from the L-070 hub to the gearmotor's M4 screw
