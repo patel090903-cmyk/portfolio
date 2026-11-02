@@ -272,6 +272,10 @@ dl.plsplit dd small { font: 400 12px var(--mono); color: var(--mute); margin-lef
 .pt.e { border-style: dashed; border-color: var(--mute); }
 .pt.nm, .pt.n { border-color: var(--mark); color: var(--mark); }
 .pt.blk { background: var(--mark); border-color: var(--mark); color: #fff; }
+.pt.mk { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.pt.vm { border-color: var(--ink); color: var(--ink); }
+.pt.sm { border-style: dotted; border-color: var(--mute); }
+.plkey { font-size: 13px; line-height: 2; color: var(--mute); margin: 8px 0 14px; }
 .plflag { margin: 14px 0 0; padding: 11px 16px; border: 1px solid var(--rule); border-left: 4px solid var(--mark); background: var(--sheet); font-size: 15px; max-width: 900px; }
 .plflag.ok { border-left-color: var(--ink); }
 .plflag b { font-weight: 600; }
