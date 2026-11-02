@@ -68,3 +68,24 @@ The buildability audit found the #35 chain at 99-126 % of its working allowable 
 | Interference | - | 0 pairs at Drive 0 / 2 / 13 / 26 axle teeth (chain included), Drive 37 deg and ChainAdjust +-12 mm (chain excluded): `Working_Model_Check\` | PASS |
 
 Not re-run: the FEA (the chain pull on the hanger and bracket dropped 25 %, so the old results are conservative) and the calc report PDF / drawings (they still show the #35 first design). Open: brake torque of the single-piston caliper (about 127 N.m needed at the axle; ask the vendor), caliper bracket weld check, rim width, UCFL206 hole size.
+
+
+## Respec 2 2026-10-29 (buildability-audit fixes, decisions taken by the assistant under Jay's authority)
+
+**Decision recorded:** chain = ANSI #40 single strand (Jay's option "duplex/#40"; #35 single strand would need a 350 A cap and sits at the limit). Kept from respec 1. Everything below is designed and calculated only; nothing has been built.
+
+| Item | Before | After | Status | Files |
+|---|---|---|---|---|
+| Rim width (audit #6) | 5 in dia x 5 in wide (an 11x7.10-5 tyre needs 7.75-8.00 in) | 5 x 8 in rim (GK-412 `Rim5x8.ipt`), tyre bead seats re-drawn; rear width 1329 mm (< 1400) | fixed | ..\Parts\Wheel\Rim5x8.ipt |
+| Wheel hub pattern (audit #6) | 4 x M8 on 90 mm (not a real 1-1/4 kart hub) | 3 holes on 2.5 in BC, 90 mm flange = JOES 25560 (listing confirmed $54.99) | fixed | ..\Parts\Wheel\RearWheelHub.ipt |
+| UCFL206 bolt holes (audit #8) | housing 14 mm, hanger 13.5 mm | housing 16 mm (Timken / NSK catalogue), hanger 14 mm + F436 hardened washers (GK-710, BOM) | fixed | ..\Parts\Drivetrain\UCFL206_Housing.ipt, ..\Parts\Chassis\BearingHanger.ipt |
+| Insert set screws on the keyway (audit #9) | not addressed | drawing note: clock set screws >= 90 deg from the keyway | fixed (drawing note) | ..\Drawings\GoKartDrivetrain_Manufacturing.pdf |
+| Brake torque (audit #3, open after respec 1) | not checked | needs 127 N m (0.51 g rear-only); 30 mm piston / 5/8 in MC / 5:1 pedal (assumed) -> 29 bar, 114 N foot force; 445 N panic push gives 492 N m (SF 3.9); disc +49 C per stop from 25 mph; brake-hub key SF 4.2 | PASS (calculated, caliper data assumed) | ..\Analysis\analysis.json `brake` |
+| Caliper bracket weld (open after respec 1) | not checked | 1631 N pad drag at 31.5 mm from the weld plane -> 5.6 MPa in 2 x 5 mm fillets (SF 26 vs 144 MPa); M8 bearing SF 23 | PASS (calculated) | ..\Analysis\analysis.json `caliper_bracket_weld` |
+| FEA re-run with the #40 loads | #35 loads (respec 1 did not re-run it) | bracket peak 6.99 / p99.9 13.1 SF (was 6.46 / 10.8); hanger 3.74 / 5.13 (was 3.57 / 4.94); axle 4.70 / 4.94 (was 4.45 / 4.71) | PASS | FEA\fea_results.json, FEA\fea_run_respec2.log |
+| Keys (40BS50 on a 1/4 x 25 key) | 1/4 x 40 hub key (deleted hub) | axle sprocket key SF 3.4 shear / 3.0 crush | PASS | ..\Analysis\analysis.json `keys` |
+| Working model | 55 occ, 0 DOF | 55 occ, 162 constraints, 0 DOF, 0 unhealthy, 0 interfering pairs at 7 poses (Drive 0/2/13/26 teeth, 37 deg, ChainAdjust +-12), 0.0 deg kinematic error, mass 41.47 kg | PASS | Working_Model_Check\working_model_check.json |
+| Calc report + drawings | still showed the #35 first design | regenerated for #40 / brake / 5x8 rims; manufacturing sheet 1 = axle only (the GK-302 hub is gone), new sheet 4 = caliper bracket + chain guard | done | ..\Analysis\GoKartDrivetrain_CalcReport.pdf, ..\Drawings\*.pdf |
+| BOM | $5,229 | $5,245 (adds 4 x F436 washers; confirmed $1,519) | done | ..\GoKartDrivetrain_BOM.csv |
+
+Still open (cannot be settled from the desk): the ME1114 face bolt pattern (needs the Motenergy drawing before machining GK-103), the real caliper piston / master-cylinder sizes, the 16S battery / BMS current rating (2.9 s 0-25 mph with a 150 A BMS instead of 2.1 s).
